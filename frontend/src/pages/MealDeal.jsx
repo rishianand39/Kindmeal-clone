@@ -12,6 +12,9 @@ const MealDeal = () => {
   return (
     <Container>
     <Navbar />
+      <div>
+        <div>hello kindmeal page</div>
+      </div>
     <Footer />
   </Container>
   )
