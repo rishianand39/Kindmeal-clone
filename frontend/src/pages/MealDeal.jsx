@@ -1,10 +1,17 @@
 
+import styled from "styled-components"
+import Navbar from "../components/Navbar";
 
+const Container=styled.div`
+
+`
 
 
 const MealDeal = () => {
   return (
-    <div>MealDeal</div>
+    <Container>
+    <Navbar />
+  </Container>
   )
 }
 
