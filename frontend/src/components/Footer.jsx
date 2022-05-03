@@ -223,7 +223,7 @@ const Footer = () => {
           <Col>
             <Heading>General</Heading>
             {general_data.map((item) => (
-              <Link to={item.to}
+              <Link key={item.title} to={item.to}
                  style={{textDecoration:"none",
                  color:"white",
                  margin: "3px",
@@ -234,7 +234,7 @@ const Footer = () => {
           <Col>
            <Heading>Feature</Heading>
             {feature_data.map((item) => (
-                <Link to={item.to}
+                <Link key={item.title} to={item.to}
                 style={{textDecoration:"none",
                 color:"white",
                 margin: "3px",
@@ -245,7 +245,7 @@ const Footer = () => {
           <Col>
               <Heading>Social Media</Heading>
               {social_Media_data.map((item=>
-                  <Link to={item.to}
+                  <Link key={item.title} to={item.to}
                   style={{textDecoration:"none",
                   color:"white",
                   margin: "3px",
@@ -256,7 +256,7 @@ const Footer = () => {
           <Col>
              <Heading>Exiting Promos</Heading>
               {exiciting_promos_data.map((item=>
-                  <Link to={item.to}
+                  <Link key={item.title} to={item.to}
                   style={{textDecoration:"none",
                   color:"white",
                   margin: "3px",
@@ -267,7 +267,7 @@ const Footer = () => {
           <Col>
               <Heading>Petfinder.my</Heading>
               {petfinder_data.map((item=>
-                  <Link to={item.to}
+                  <Link key={item.title} to={item.to}
                   style={{textDecoration:"none",
                   color:"white",
                   margin: "3px",
