@@ -260,7 +260,6 @@ const Footer = () => {
                   style={{textDecoration:"none",
                   color:"white",
                     margin: "3px",
-                    padding: "20px",
                  }}
                >{item.title}</Link>
                 ))}
