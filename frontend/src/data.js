@@ -25,6 +25,97 @@ export const Latest_newVideo = [
     title: "Spiced Sausage Pasta",
   },
 ];
+export const Latest_newVideo_heading =[
+  {id:1,
+    title:"Latest News & Videos",
+    to:"/"
+  },
+  {
+    id:2,
+    title:"Save Lives with Your Blog",
+    to:"/"
+  },
+  {
+    id:3,
+    title:"News & Articles",
+    to:"/"
+  },
+  {
+    id:4,
+    title:"Follow Our Facebook",
+    to:"/"
+  }
+  
+];
+
+export const Yummylicious_heading =[
+  {id:1,
+    title:"Yummylicious Moments",
+    to:"/"
+  },
+  {
+    id:2,
+    title:"Secret Recipes",
+    to:"/"
+  },
+  {
+    id:3,
+    title:"Member Hot Picks ",
+    to:"/"
+
+  },
+  {
+    id:4,
+    title:"Photo Moments",
+    to:"/"
+  }
+  
+];
+export const Dicover_restaurants_heading =[
+  {id:1,
+    title:"Discover Restaurants",
+    to:"/"
+  },
+  {
+    id:2,
+    title:"Vegetarian Directory ",
+    to:"/"
+  },
+  {
+    id:3,
+    title:"Restaurant Menu",
+    to:"/"
+  },
+  {
+    id:4,
+    title:"Food Map",
+    to:"/"
+  }
+  
+];
+export const Amazing_superheroes_heading =[
+  {id:1,
+    title:"Amazing Superheroes",
+    to:"/"
+  },
+  {
+    id:2,
+    title:"Latest Buzz",
+    to:"/"
+  },
+  {
+    id:3,
+    title:"Lifestyle Ambassadors",
+    to:"/"
+  },
+  {
+    id:4,
+    title:"Win Gifts!",
+    to:"/"
+  }
+  
+];
+
 
 export const Yummylicious = [
   {

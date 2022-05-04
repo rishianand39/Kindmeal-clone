@@ -46,19 +46,22 @@ const Title=styled.p`
 `
 
 
-const Card = ({contents}) => {
+const Card = ({contents,heading}) => {
   return (
     <Container>
         <Wrapper>
             <Heading>
-                <Content><Link to={"/"}
+                {heading.map((e)=>
+                <Content key={e.id}><Link to={e.to}
                 style={{
                     textDecoration:"none",
                     color: "#6e7174",
                     
                 }}
-                >Latest News &amp; Videos</Link></Content>
-                <Content><Link to={"/"}
+                >{e.title}</Link></Content>
+                )}
+
+                {/* <Content><Link to={"/"}
                 style={{
                     color:"#2c87fa",
                     textDecoration:"none"
@@ -76,11 +79,11 @@ const Card = ({contents}) => {
                     color:"#2c87fa",
                     textDecoration:"none"
                 }}
-                > Follow Our Facebook</Link></Content>
+                > Follow Our Facebook</Link></Content> */}
             </Heading>
             <CardDiv>
                 {contents.map(item=>
-                    <Item>
+                    <Item key={item.id}>
                         <Link to={"/mealdeal"}><Image src={item.img}/></Link>
                         <Title>{item.title}</Title>
                     </Item>
