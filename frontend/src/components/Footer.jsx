@@ -259,7 +259,8 @@ const Footer = () => {
                   <Link to={item.to}
                   style={{textDecoration:"none",
                   color:"white",
-                  margin: "3px",
+                    margin: "3px",
+                    padding: "20px",
                  }}
                >{item.title}</Link>
                 ))}
