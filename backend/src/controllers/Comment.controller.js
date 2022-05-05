@@ -30,14 +30,14 @@ router.get("/",async(req,res)=>{
 
         let comments;
         if(qNew){
-            comments=await Product.find().sort({createdAt: -1}).limit(5)
+            comments=await Comment.find().sort({createdAt: -1}).limit(5)
         }else if(qCategory){
-            comments=await Product.find({categories:{
+            comments=await Comment.find({categories:{
                 $in:[qCategory],
                },
             })
         }else{
-            comments=await Product.find();
+            comments=await Comment.find();
         }
       
         return res.status(200).json(comments)
