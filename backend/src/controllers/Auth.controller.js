@@ -60,7 +60,7 @@ router.post("/login",async(req,res)=>{
     } catch (error) {
       return res.status(500).json(error)  
     }
-})
+});
 
 
 module.exports=router;
