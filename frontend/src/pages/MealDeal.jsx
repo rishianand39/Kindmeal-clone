@@ -235,6 +235,50 @@ const Bannerimg = styled.img`
   height : 100%;
 `
 
+const Meals_data = [
+  {
+    img: "https://www.kindmeal.my/photos/deal/7/709-4950-l.jpg",
+    title: "Hainan Village —  Cheras, Selangor",
+    dis: "Inspired by the love for animals and the planet, Hainan Village Kopitiam is an advocate of meat-free, egg & plant-based diet. And ..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
+    },
+    review : "12",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "20% Off",
+    expire : "10 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/6/669-4206-l.jpg",
+    title: "Mangga Vegetarian Cafe —  Seri Kembangan, Selangor",
+    dis: "Mangga Vegetarian Cafe comforts you with a pure, natural dining ambiance, serving you a healthy, delectable selection of Asian and..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star.png",
+    },
+    review : "4",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg_disabled.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "20% Off",
+    expire : "13 Days",
+  },
+  
+];
+
 
 const MealDeal = () => {
   return (
