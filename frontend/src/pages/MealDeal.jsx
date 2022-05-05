@@ -1,7 +1,11 @@
 
+import { useEffect } from "react";
 import styled from "styled-components"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { useDispatch , useSelector } from "react-redux";
+import { mealsdeal } from "../Redux/MealDeal/action"
+import { filtermealsdeal} from "../Redux/MealDeal/action"
 
 const Container = styled.div`
 
@@ -235,6 +239,30 @@ const Bannerimg = styled.img`
   width: 100%;
   height : 100%;
 `
+// -----------top banner done-------------
+
+const BBannerdiv = styled.div`
+  width: 100%;
+  height : 240px;
+  margin : 0;
+  // border : 1px solid lightgrey;
+  padding-top : 40px;
+  background-color: #e0e0e0;
+`
+
+const BBannerimgdiv = styled.div`
+  width: 80%;
+  height : 100%;
+  margin: auto;
+  // border : 1px solid lightgrey;
+  // box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`
+const BBannerimg = styled.img`
+  width: 100%;
+  height : 100%;
+`
+// style={{ marginBottom: "0" , width: "100%", backgroundColor: "#e0e0e0", boxShadow: "none"}}
+
 
 const Meals_data = [
   {
@@ -255,7 +283,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "20% Off",
-    expire : "10 Days",
+    expire: "10 Days",
+    category : "Indian",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/6/669-4206-l.jpg",
@@ -275,7 +304,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "20% Off",
-    expire : "13 Days",
+    expire: "13 Days",
+    category : "Burger",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/5/506-2350-l.jpg",
@@ -295,7 +325,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "20% Off",
-    expire : "1 Days",
+    expire: "1 Days",
+    category : "Indian",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
@@ -316,6 +347,7 @@ const Meals_data = [
     },
     dicount: "20% Off",
     expire : "13 Days",
+    category : "Pasta",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/3/383-1189-l.jpg",
@@ -335,7 +367,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "20% Off",
-    expire : "10 Days",
+    expire: "10 Days",
+    category : "Chinese",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/6/687-4507-l.jpg",
@@ -355,7 +388,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "10% Off",
-    expire : "7 Days",
+    expire: "7 Days",
+    category : "Breakfast",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/1/177-1118-l.jpg",
@@ -375,7 +409,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "20% Off",
-    expire : "13 Days",
+    expire: "13 Days",
+    category : "Soup",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/7/704-4734-l.jpg",
@@ -395,7 +430,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "15% Off",
-    expire : "1 Days",
+    expire: "1 Days",
+    category : "Tea or Dessert",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/5/590-3137-l.jpg",
@@ -415,7 +451,8 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "20% Off",
-    expire : "9 Hours",
+    expire: "9 Hours",
+    category : "Salad",
   },
   {
     img: "https://www.kindmeal.my/photos/deal/7/700-4802-l.jpg",
@@ -435,13 +472,39 @@ const Meals_data = [
       alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
     },
     dicount: "15% Off",
-    expire : "13 Day",
+    expire: "13 Day",
+    category : "Chinese",
   },
   
 ];
 
 
+
 const MealDeal = () => {
+  
+  const dispatch = useDispatch();
+  const Meals_Data = useSelector((store) => store.mealsdealdata)
+  console.log(Meals_Data)
+
+
+  useEffect(() => {
+    dispatch(mealsdeal(Meals_data))
+  },[])
+
+
+  const filtervalue = (e) => {
+    const Category = e.target.value;
+    if (Category === "All Categories") {
+      dispatch(mealsdeal(Meals_data))
+    } else {
+      dispatch(mealsdeal(Meals_data))
+      dispatch(filtermealsdeal(Category))
+    }
+    console.log(Category);
+  }
+  
+
+
   return (
     <Container>
       <Navbar />
@@ -455,7 +518,7 @@ const MealDeal = () => {
           <H2>Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</H2>
           <FilterDiv>
             <FilterDiv1 type="text" placeholder="Search Shop or Deal Name" />
-            <FilterDiv2  name="hiiii" id="" >
+            <FilterDiv2  name="" id="" onChange={filtervalue} >
               <option value="All Categories">All Categories</option>
               <option value="Pasta">Pasta</option>
               <option value="Burger">Burger</option>
@@ -467,7 +530,7 @@ const MealDeal = () => {
               <option value="Jap or Korean">Jap or Korean</option>
               <option value="Chinese">Chinese</option>
               <option value="Indian">Indian</option>
-              <option value="Souo">Souo</option>
+              <option value="Soup">Soup</option>
             </FilterDiv2>
             <FilterDiv2  name="hiiii" id="" >
               <option value="All Location">All Locations</option>
@@ -484,7 +547,7 @@ const MealDeal = () => {
       </Bannerdiv>
       <MealdealContainer>
         <Card>
-          {Meals_data.map((e) =><MealsDiv>
+          {Meals_Data.map((e) =><MealsDiv>
             <Imgdiv>
               <Img src={e.img} alt="" />
               {/* <Imgtitle>Yishensu Oriental Cuisine</Imgtitle> */}
@@ -531,6 +594,11 @@ const MealDeal = () => {
           <MealsDiv></MealsDiv> */}
         </Card>
       </MealdealContainer>
+      <BBannerdiv>
+        <BBannerimgdiv>
+          <BBannerimg  src="https://www.kindmeal.my/images/how_kindmeal_works.png" alt="" />
+        </BBannerimgdiv>
+      </BBannerdiv>
     <Footer />
   </Container>
   )
