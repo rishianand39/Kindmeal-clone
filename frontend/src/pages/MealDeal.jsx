@@ -16,7 +16,8 @@ const Card = styled.div`
   grid-template-columns: repeat(2, 1fr);
   row-gap : 2%;
   column-gap : 5%;
-  grid-template-rows: repeat(5, 543px);
+  margin-bottom : 250px;
+  // grid-template-rows: repeat(5, 543px);
   // border : 1px solid grey;
 `
 
@@ -276,6 +277,166 @@ const Meals_data = [
     dicount: "20% Off",
     expire : "13 Days",
   },
+  {
+    img: "https://www.kindmeal.my/photos/deal/5/506-2350-l.jpg",
+    title: "Ring Zhi Vegetarian Restaurant 灵芝素食饭店",
+    dis: "This place brings back memories to those days where we would have such delicious authentic meals for festive eats. Select from AN.",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star.png",
+    },
+    review : "12",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "20% Off",
+    expire : "1 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
+    title: "Croutons Cafe —  Seri Kembangan, Selangor",
+    dis: "Croutons brings you a sumptuous variety of international cuisines. Indulge in any of the meat-free items from our menu below: • ..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_half.png",
+    },
+    review : "12",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol.png",
+    },
+    dicount: "20% Off",
+    expire : "13 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/3/383-1189-l.jpg",
+    title: "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
+    dis: "Dine in this authentic cozy Chinese environment with any items from the menu, made with fresh and quality ingredients, in an envir..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
+    },
+    review : "12",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "20% Off",
+    expire : "10 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/6/687-4507-l.jpg",
+    title: "Alam N-Ion —  Kuala Lumpur, Wilayah Persekutuan",
+    dis: "Serving you delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. Feast on our wide..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star2: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star3: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star4: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
+    },
+    review : "0",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "10% Off",
+    expire : "7 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/1/177-1118-l.jpg",
+    title: "A Pie Thing —  Petaling Jaya & 1 Branch",
+    dis: "When Pies conquer the world, you sit back, relax and have pies. Enjoy any delicious meat-free Savoury or Sweet Pies available in..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star.png",
+    },
+    review : "8",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "20% Off",
+    expire : "13 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/7/704-4734-l.jpg",
+    title: "Negative 12 Degrees —  Bangsar, Kuala Lumpur",
+    dis: "Indulge in our rich, flavorful selection of vegan ice-creams, crafted with healthy, natural ingredients. Enjoy any ice-creams fro..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star2: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star3: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star4: "https://www.kindmeal.my/images/icon_star_grey.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
+    },
+    review : "0",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg_disabled.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk_disabled.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "15% Off",
+    expire : "1 Days",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/5/590-3137-l.jpg",
+    title: "Rawsome —  Sungai Buloh, Selangor",
+    dis: "Enjoy healthy, guilt-free, raw food meals artfully crafted for a nutritious and delicious experience. Indulge in a satisfying mea..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_half.png",
+    },
+    review : "6",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk_disabled.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "20% Off",
+    expire : "9 Hours",
+  },
+  {
+    img: "https://www.kindmeal.my/photos/deal/7/700-4802-l.jpg",
+    title: "Midas Cuisine —  Banting, Selangor",
+    dis: "Let our Midas touch transform your meal into a gastronomic adventure. Indulge in healthy and delicious Chinese cuisine within our..",
+    rating: {
+      star1: "https://www.kindmeal.my/images/icon_star.png",
+      star2: "https://www.kindmeal.my/images/icon_star.png",
+      star3: "https://www.kindmeal.my/images/icon_star.png",
+      star4: "https://www.kindmeal.my/images/icon_star.png",
+      star5 : "https://www.kindmeal.my/images/icon_star_half.png",
+    },
+    review : "6",
+    contains: {
+      egg: "https://www.kindmeal.my/images/icon_egg.png",
+      dairy: "https://www.kindmeal.my/images/icon_milk.png",
+      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
+    },
+    dicount: "15% Off",
+    expire : "13 Day",
+  },
   
 ];
 
@@ -323,51 +484,51 @@ const MealDeal = () => {
       </Bannerdiv>
       <MealdealContainer>
         <Card>
-          <MealsDiv>
+          {Meals_data.map((e) =><MealsDiv>
             <Imgdiv>
-              <Img src="https://www.kindmeal.my/photos/deal/5/518-3788-l.jpg" alt="" />
+              <Img src={e.img} alt="" />
               {/* <Imgtitle>Yishensu Oriental Cuisine</Imgtitle> */}
             </Imgdiv>
-            <P1>Yishensu —  Petaling Jaya, Selangor</P1>
-            <P2>Yishensu offers a wide range of delicious oriental dishes, from traditional favorites to creative fusion delights. Enjoy discount..</P2>
+            <P1>{ e.title}</P1>
+            <P2>{ e.dis}</P2>
             <StarCouponDiv>
               <Button>Get FREE Coupon</Button>
               <Stardiv>
-                <Star src="https://www.kindmeal.my/images/icon_star.png" alt="" />
-                <Star src="https://www.kindmeal.my/images/icon_star.png" alt="" />
-                <Star src="https://www.kindmeal.my/images/icon_star.png" alt="" />
-                <Star src="https://www.kindmeal.my/images/icon_star.png" alt="" />
-                <Star src="https://www.kindmeal.my/images/icon_star.png" alt="" />
-                <StarP>(22)</StarP>
+                <Star src={e.rating.star1} alt="" />
+                <Star src={e.rating.star2} alt="" />
+                <Star src={e.rating.star3} alt="" />
+                <Star src={e.rating.star4} alt="" />
+                <Star src={e.rating.star5} alt="" />
+                <StarP>({e.review})</StarP>
               </Stardiv>
             </StarCouponDiv>
             <Shopdealdiv>
               <Left>
                 <Leftimgdiv>
-                  <Leftimg src="https://www.kindmeal.my/images/icon_egg.png" alt="" />
+                  <Leftimg src={e.contains.egg} alt="" />
                 </Leftimgdiv>
                 <Leftimgdiv>
-                  <Leftimg src="https://www.kindmeal.my/images/icon_milk.png" alt="" />
+                  <Leftimg src={e.contains.dairy} alt="" />
                 </Leftimgdiv>
                 <Leftimgdiv>
-                  <Leftimg src="https://www.kindmeal.my/images/icon_alcohol_disabled.png" alt="" />
+                  <Leftimg src={e.contains.alcohol} alt="" />
                 </Leftimgdiv>
               </Left>
               <Centre>
                 <CentreP1>KindMeal Discount</CentreP1>
-                <CentreP2>15% Off</CentreP2>
+                <CentreP2>{ e.dicount }</CentreP2>
               </Centre>
               <Right>
                 <CentreP1>Expiring Soon</CentreP1>
-                <RightP2>2 Hours</RightP2>
+                <RightP2>{e.expire }</RightP2>
               </Right>
             </Shopdealdiv>
-          </MealsDiv>
+          </MealsDiv>)}
+          {/* <MealsDiv></MealsDiv>
           <MealsDiv></MealsDiv>
           <MealsDiv></MealsDiv>
           <MealsDiv></MealsDiv>
-          <MealsDiv></MealsDiv>
-          <MealsDiv></MealsDiv>
+          <MealsDiv></MealsDiv> */}
         </Card>
       </MealdealContainer>
     <Footer />
