@@ -4,8 +4,10 @@ import styled from "styled-components"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useDispatch , useSelector } from "react-redux";
-import { mealsdeal } from "../Redux/MealDeal/action"
-import { filtermealsdeal} from "../Redux/MealDeal/action"
+import { mealsdeal } from "../Redux/MealDeal/action";
+import { filtermealsdeal } from "../Redux/MealDeal/action";
+import { Link } from "react-router-dom";
+
 
 const Container = styled.div`
 
@@ -354,19 +356,22 @@ const MealDeal = () => {
       </Bannerdiv>
       <MealdealContainer>
         <Card>
-          {Meals_Data.map((e,i) =><MealsDiv key={i}>
-            <Imgdiv>
-              <Img src={e.img} alt="" />
-              {/* <Imgtitle>Yishensu Oriental Cuisine</Imgtitle> */}
-            </Imgdiv>
+          {Meals_Data.map((e, i) => <MealsDiv key={i}>
+            <Link to={`/mealdeal/${e._id}`} >
+              <Imgdiv>
+                <Img src={e.img} alt="" />
+              </Imgdiv>
+             </Link>
             <P1>{ e.restaurant}</P1>
-            <P2>{ e.dis}</P2>
-            <StarCouponDiv>
+            <P2>{e.dis}</P2>
+            <Link to={`/mealdeal/${e._id}`} style={{textDecoration : "none"}} >
+              <StarCouponDiv>
               <Button>Get FREE Coupon</Button>
-              <Stardiv>{e.rating.map((e) => <Star src={e} alt="" />)}
-                <StarP>({e.review})</StarP>
-              </Stardiv>
-            </StarCouponDiv>
+                <Stardiv>{e.rating.map((e) => <Star src={e} alt="" />)}
+                  <StarP>({e.review})</StarP>
+                </Stardiv>
+              </StarCouponDiv>
+             </Link>
             <Shopdealdiv>
               <Left>{e.contains.map((e) =>  <Leftimgdiv>
                   <Leftimg src={e} alt="" />
