@@ -9,6 +9,7 @@ const HotPickSchema= new mongoose.Schema({
     discount:{type:Number,required:true},
     price:{type:Number,required:true},
     location:{type:String,required:true},
+    ingredient:{type:Array,required:true},
     rating:{type:Number,},
     details:{type:String,},    
 },{
