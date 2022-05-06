@@ -1,5 +1,6 @@
-  
+
 const express=require("express")
+const cors=require("cors")
 const app=express()
 
 require('dotenv').config()
@@ -9,6 +10,10 @@ const hotpickController=require("./controllers/Hotpick.controller")
 const commentController=require("./controllers/Comment.controller")
 const KindMomentController=require("./controllers/Kindmoment.controller")
 const mealdealController=require("./controllers/Mealdeal.controller")
+
+app.use(cors());
+
+
 
 app.get("/",(req,res)=>{
     return res.status(200).json("Hello world")
