@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -261,246 +261,51 @@ const BBannerimg = styled.img`
   width: 100%;
   height : 100%;
 `
-// style={{ marginBottom: "0" , width: "100%", backgroundColor: "#e0e0e0", boxShadow: "none"}}
 
-
-const Meals_data = [
-  {
-    img: "https://www.kindmeal.my/photos/deal/7/709-4950-l.jpg",
-    title: "Hainan Village —  Cheras, Selangor",
-    dis: "Inspired by the love for animals and the planet, Hainan Village Kopitiam is an advocate of meat-free, egg & plant-based diet. And ..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
-    },
-    review : "12",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "20% Off",
-    expire: "10 Days",
-    category : "Indian",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/6/669-4206-l.jpg",
-    title: "Mangga Vegetarian Cafe —  Seri Kembangan, Selangor",
-    dis: "Mangga Vegetarian Cafe comforts you with a pure, natural dining ambiance, serving you a healthy, delectable selection of Asian and..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star.png",
-    },
-    review : "4",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg_disabled.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "20% Off",
-    expire: "13 Days",
-    category : "Burger",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/5/506-2350-l.jpg",
-    title: "Ring Zhi Vegetarian Restaurant 灵芝素食饭店",
-    dis: "This place brings back memories to those days where we would have such delicious authentic meals for festive eats. Select from AN.",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star.png",
-    },
-    review : "12",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "20% Off",
-    expire: "1 Days",
-    category : "Indian",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/5/529-2478-l.jpg",
-    title: "Croutons Cafe —  Seri Kembangan, Selangor",
-    dis: "Croutons brings you a sumptuous variety of international cuisines. Indulge in any of the meat-free items from our menu below: • ..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_half.png",
-    },
-    review : "12",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol.png",
-    },
-    dicount: "20% Off",
-    expire : "13 Days",
-    category : "Pasta",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/3/383-1189-l.jpg",
-    title: "Dining Bowl —  Kuala Lumpur, Wilayah Persekutuan",
-    dis: "Dine in this authentic cozy Chinese environment with any items from the menu, made with fresh and quality ingredients, in an envir..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
-    },
-    review : "12",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "20% Off",
-    expire: "10 Days",
-    category : "Chinese",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/6/687-4507-l.jpg",
-    title: "Alam N-Ion —  Kuala Lumpur, Wilayah Persekutuan",
-    dis: "Serving you delicious home-cooked vegetarian meals, crafted with the healthiest ingredients and plenty of love. Feast on our wide..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star2: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star3: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star4: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
-    },
-    review : "0",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "10% Off",
-    expire: "7 Days",
-    category : "Breakfast",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/1/177-1118-l.jpg",
-    title: "A Pie Thing —  Petaling Jaya & 1 Branch",
-    dis: "When Pies conquer the world, you sit back, relax and have pies. Enjoy any delicious meat-free Savoury or Sweet Pies available in..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star.png",
-    },
-    review : "8",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "20% Off",
-    expire: "13 Days",
-    category : "Soup",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/7/704-4734-l.jpg",
-    title: "Negative 12 Degrees —  Bangsar, Kuala Lumpur",
-    dis: "Indulge in our rich, flavorful selection of vegan ice-creams, crafted with healthy, natural ingredients. Enjoy any ice-creams fro..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star2: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star3: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star4: "https://www.kindmeal.my/images/icon_star_grey.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_grey.png",
-    },
-    review : "0",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg_disabled.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk_disabled.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "15% Off",
-    expire: "1 Days",
-    category : "Tea or Dessert",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/5/590-3137-l.jpg",
-    title: "Rawsome —  Sungai Buloh, Selangor",
-    dis: "Enjoy healthy, guilt-free, raw food meals artfully crafted for a nutritious and delicious experience. Indulge in a satisfying mea..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_half.png",
-    },
-    review : "6",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk_disabled.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "20% Off",
-    expire: "9 Hours",
-    category : "Salad",
-  },
-  {
-    img: "https://www.kindmeal.my/photos/deal/7/700-4802-l.jpg",
-    title: "Midas Cuisine —  Banting, Selangor",
-    dis: "Let our Midas touch transform your meal into a gastronomic adventure. Indulge in healthy and delicious Chinese cuisine within our..",
-    rating: {
-      star1: "https://www.kindmeal.my/images/icon_star.png",
-      star2: "https://www.kindmeal.my/images/icon_star.png",
-      star3: "https://www.kindmeal.my/images/icon_star.png",
-      star4: "https://www.kindmeal.my/images/icon_star.png",
-      star5 : "https://www.kindmeal.my/images/icon_star_half.png",
-    },
-    review : "6",
-    contains: {
-      egg: "https://www.kindmeal.my/images/icon_egg.png",
-      dairy: "https://www.kindmeal.my/images/icon_milk.png",
-      alcohol : "https://www.kindmeal.my/images/icon_alcohol_disabled.png",
-    },
-    dicount: "15% Off",
-    expire: "13 Day",
-    category : "Chinese",
-  },
-  
-];
 
 
 
 const MealDeal = () => {
   
+  const [serchtext, setSerchtext] = useState("");
+  const [mealdata, setMealData] = useState([]);
+
   const dispatch = useDispatch();
   const Meals_Data = useSelector((store) => store.mealsdealdata)
-  console.log(Meals_Data)
+  // console.log(Meals_Data)
 
 
   useEffect(() => {
-    dispatch(mealsdeal(Meals_data))
+    getdata();
   },[])
+
+  
+  const getdata = () => {
+    fetch("https://kind-meal-project.herokuapp.com/mealdeal").then(d => d.json()).then(data => {
+      console.log(data);
+      dispatch(mealsdeal(data))
+      setMealData(data)
+    })
+}
 
 
   const filtervalue = (e) => {
     const Category = e.target.value;
     if (Category === "All Categories") {
-      dispatch(mealsdeal(Meals_data))
+      dispatch(mealsdeal(mealdata))
     } else {
-      dispatch(mealsdeal(Meals_data))
+      dispatch(mealsdeal(mealdata))
       dispatch(filtermealsdeal(Category))
     }
     console.log(Category);
+  }
+
+  const serach_meal = (e) => {
+    console.log(e.key)
+    if (e.key === "Enter") {
+      dispatch(mealsdeal(mealdata))
+      dispatch(filtermealsdeal(serchtext))
+    }
   }
   
 
@@ -517,19 +322,21 @@ const MealDeal = () => {
           <H1>Browse delicious meat-free, vegetarian deals from top restaurants and cafes! Just click on "Get Free Coupon" to obtain instant discounts and dine at the restaurants. No upfront payment, booking or printing is needed. If you share it on social media, you'll even DOUBLE your discount!</H1>
           <H2>Download our mobile app now to easily get coupons and start dining in a few seconds. Effortlessly save lives, health, environment and money now!</H2>
           <FilterDiv>
-            <FilterDiv1 type="text" placeholder="Search Shop or Deal Name" />
+            <FilterDiv1 type="text" placeholder="Search Shop or Deal Name"
+              onKeyPress={(e) => serach_meal(e)}
+              onChange={(e) => setSerchtext(e.target.value)} />
             <FilterDiv2  name="" id="" onChange={filtervalue} >
               <option value="All Categories">All Categories</option>
-              <option value="Pasta">Pasta</option>
+              <option value="Indian">Indian</option>
+              <option value="Chinease">Chinese</option>
               <option value="Burger">Burger</option>
-              <option value="Breakfast">Breakfast</option>
               <option value="Salad">Salad</option>
               <option value="Bakery">Bakery</option>
               <option value="Tea or Dessert">Tea or Dessert</option>
               <option value="Local Delights">Local Delights</option>
               <option value="Jap or Korean">Jap or Korean</option>
-              <option value="Chinese">Chinese</option>
-              <option value="Indian">Indian</option>
+              <option value="Breakfast">Breakfast</option>
+              <option value="Pasta">Pasta</option>
               <option value="Soup">Soup</option>
             </FilterDiv2>
             <FilterDiv2  name="hiiii" id="" >
@@ -547,51 +354,34 @@ const MealDeal = () => {
       </Bannerdiv>
       <MealdealContainer>
         <Card>
-          {Meals_Data.map((e) =><MealsDiv>
+          {Meals_Data.map((e,i) =><MealsDiv key={i}>
             <Imgdiv>
               <Img src={e.img} alt="" />
               {/* <Imgtitle>Yishensu Oriental Cuisine</Imgtitle> */}
             </Imgdiv>
-            <P1>{ e.title}</P1>
+            <P1>{ e.restaurant}</P1>
             <P2>{ e.dis}</P2>
             <StarCouponDiv>
               <Button>Get FREE Coupon</Button>
-              <Stardiv>
-                <Star src={e.rating.star1} alt="" />
-                <Star src={e.rating.star2} alt="" />
-                <Star src={e.rating.star3} alt="" />
-                <Star src={e.rating.star4} alt="" />
-                <Star src={e.rating.star5} alt="" />
+              <Stardiv>{e.rating.map((e) => <Star src={e} alt="" />)}
                 <StarP>({e.review})</StarP>
               </Stardiv>
             </StarCouponDiv>
             <Shopdealdiv>
-              <Left>
-                <Leftimgdiv>
-                  <Leftimg src={e.contains.egg} alt="" />
-                </Leftimgdiv>
-                <Leftimgdiv>
-                  <Leftimg src={e.contains.dairy} alt="" />
-                </Leftimgdiv>
-                <Leftimgdiv>
-                  <Leftimg src={e.contains.alcohol} alt="" />
-                </Leftimgdiv>
+              <Left>{e.contains.map((e) =>  <Leftimgdiv>
+                  <Leftimg src={e} alt="" />
+                </Leftimgdiv>)}
               </Left>
               <Centre>
                 <CentreP1>KindMeal Discount</CentreP1>
-                <CentreP2>{ e.dicount }</CentreP2>
+                <CentreP2>{ e.discount }% off</CentreP2>
               </Centre>
               <Right>
-                <CentreP1>Expiring Soon</CentreP1>
-                <RightP2>{e.expire }</RightP2>
+                <CentreP1>Expires In</CentreP1>
+                <RightP2>{e.expire} Days</RightP2>
               </Right>
             </Shopdealdiv>
           </MealsDiv>)}
-          {/* <MealsDiv></MealsDiv>
-          <MealsDiv></MealsDiv>
-          <MealsDiv></MealsDiv>
-          <MealsDiv></MealsDiv>
-          <MealsDiv></MealsDiv> */}
         </Card>
       </MealdealContainer>
       <BBannerdiv>
