@@ -1,7 +1,7 @@
 
 const mongoose=require("mongoose")
 
-const KinkMomentSchema= new mongoose.Schema({
+const KindMomentSchema= new mongoose.Schema({
     img:{type:String,required:true},
     avatar:{type:String,required:true},
     username:{type:String,required:true},
@@ -14,4 +14,4 @@ const KinkMomentSchema= new mongoose.Schema({
     versionKey:false
 })
 
-module.exports=mongoose.model("KinkMoment",KinkMomentSchema)
+module.exports=mongoose.model("KindMoment",KindMomentSchema)
