@@ -20,4 +20,4 @@
  
  
  
- /kindmeal
+ /kindmoment
