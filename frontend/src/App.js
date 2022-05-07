@@ -4,7 +4,6 @@ import Home from "./pages/Home"
 import MealDeal from "./pages/MealDeal"
 import KindMoments from "./pages/KindMoments"
 import MealDealDetail from "./pages/MealDealDetail"
-import Signup from "./pages/Signup"
 
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
         <Route path="/mealdeal" element={<MealDeal />}/>
         <Route path="/kindmoments" element={<KindMoments />} />
         <Route path="/mealdeal/:id" element={<MealDealDetail />} />
-        <Route path="/signup" element={<Signup/>}/>
       </Routes>
     </div>
   );
