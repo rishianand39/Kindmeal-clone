@@ -2,11 +2,11 @@ import styled from "styled-components"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
 import { useParams} from "react-router-dom";
 
 const Container=styled.div`
-border : 1px solid red;
+// border : 1px solid red;
 `
 const Coverimgdiv = styled.div`
 width : 100%;
@@ -21,7 +21,7 @@ const Heading = styled.p`
 font-weight: bold;
 text-shadow: 2px 2px 3px #ffffff;
 font-size: 26px;
-margin : 5px 0 0 565px;
+margin : 5px 0 0 450px;
 `
 const DivTab = styled.div`
 display: flex;
@@ -131,7 +131,7 @@ width : 50%;
 `
 const Detailsdiv2 = styled.div`
 width : 50%;
-border : 1px solid red ; 
+// border : 1px solid red ; 
 margin-left : 5%;
 padding : 1%;
 `
@@ -143,6 +143,12 @@ text-align : left;
 `
 const P2 = styled.p`
 font-size: 14px;
+// border: 1px solid grey;
+margin : 0px 0 10px 0;
+text-align : left;
+`
+const P3 = styled.p`
+font-size: 16px;
 // border: 1px solid grey;
 margin : 0px 0 10px 0;
 text-align : left;
@@ -163,18 +169,42 @@ const DietDivimg = styled.img`
 width : 100%;
 height : 100%;
 `
+const Terms = styled.div`
+// border: 1px solid red;
+width : 100%;
+display: flex`
+
+const Termsdiv = styled.div`
+// border: 1px solid black;
+width : 30%;
+`
+const Termsdiv2 = styled.div`
+// border: 1px solid black;
+width : 65%;
+margin-left : 4%;
+`
+const L = styled.li`
+font-size: 14px;
+text-align : left;
+margin-left : 0px;
+`
+
 
 
 const MealDealDetail = () => {
     const { id } = useParams();
+
+    const [single, setSingle] = useState({});
+
     useEffect(() => {
         getdata();
-      },[])
-      const getdata = () => {
-        fetch(`https://kind-meal-project.herokuapp.com/mealdeal/find/${id}`).then(d => d.json()).then(data => {
+    }, [])
+    
+      const getdata = async () => {
+        await fetch(`https://kind-meal-project.herokuapp.com/mealdeal/find/${id}`).then(d => d.json()).then(data => {
           console.log(data);
         //   dispatch(mealsdeal(data))
-        //   setMealData(data)
+        setSingle(data)
         })
     }
 
@@ -184,7 +214,7 @@ const MealDealDetail = () => {
        <Coverimgdiv>
            <Coverimg src="https://www.kindmeal.my/photos/shop/5/570-c.jpg" alt="" />
        </Coverimgdiv>
-       <Heading>Figure Out Cafe</Heading>
+          <Heading>{single.restaurant}</Heading>
         <DivTab>
          <p>Overview</p>
          <p style={{borderBottom : "3px solid #05c85f"}}>Meal Deals</p>
@@ -192,10 +222,10 @@ const MealDealDetail = () => {
          <p>Location</p>
         </DivTab>
         <Maindiv>
-            <Maindivhead>Blend of Asian Flavors</Maindivhead>
+              <Maindivhead>{ single.title}</Maindivhead>
              <Mealdetaildiv>
                 <Mealimgdiv>
-                    <Mealimgdivimg src="https://www.kindmeal.my/photos/deal/6/686-4475-m.jpg" alt="" />
+                    <Mealimgdivimg src={single.img} alt="" />
                 </Mealimgdiv>
                 <Mealimgdiv>
                     <CouponDiv>
@@ -206,36 +236,38 @@ const MealDealDetail = () => {
                         </PriceDiv>
                         <PriceDiv>
                             <Price1>KindMeal Discount</Price1>
-                            <Price2 style={{color: "#19ab3f"}}>15% off</Price2>
+                              <Price2 style={{ color: "#19ab3f" }}>{single.discount}% off</Price2>
                         </PriceDiv>
                     </CouponDiv>
                     <CouponDiv style={{display : "block"}}>
                          <CouponP>No pre-payment or booking needed. Get coupon and dine instantly!</CouponP>
                          <Couponbtn>Get FREE Coupon</Couponbtn>
-                         <CouponP style={{fontSize: "12px"}}>Grab this KindMeal Coupon now to enjoy 15% off!  How it works</CouponP>
+                         <CouponP style={{fontSize: "12px"}}>Grab this KindMeal Coupon now to enjoy {single.discount}% off!  How it works</CouponP>
                     </CouponDiv>
                 </Mealimgdiv>
              </Mealdetaildiv>
               <Detailsdiv>
                   <Detailsdiv1>
                       <P1>Delicious Details</P1>
-                      <P2>Let us Figure Out the most delicious blend of Asian flavors, pampering you within a relaxing atmosphere!</P2>
+                      <P2>{ single.dis}</P2>
                       <P2>Enjoy discount off a large variety of menu items:</P2>
-
-                      <P1 style={{
-                          marginTop : "40px"
-                      }}>Diet Restriction</P1>
+                      <br />
+                      <P1>Secret Ingredients</P1>
+                      {/* <div>{single.ingredient.map((e) => (<P2>{e}</P2>))}</div> */}
+                      {/* <Stardiv>{e.rating.map((e) => <Star src={e} alt="" />)} */}
+                      <br />
+                      <P1>Diet Restriction</P1>
                       <DietDiv>
                           <DietDivcontains>
                               <DietDivimg src="https://www.kindmeal.my/images/icon_egg.png" alt="" />
                           </DietDivcontains>
                           <P2 style={{marginTop : "10px"}} >Contains Eggs</P2>
                           <DietDivcontains>
-                              <DietDivimg src="https://www.kindmeal.my/images/icon_milk.png" alt="" />
+                              <DietDivimg src="https://www.kindmeal.my/images/icon_milk.png"  alt="" />
                           </DietDivcontains>
                           <P2 style={{marginTop : "10px"}} >Contains Dairy</P2>
                           <DietDivcontains>
-                               <DietDivimg src="https://www.kindmeal.my/images/icon_alcohol_disabled.png" alt="" />
+                               <DietDivimg src="https://www.kindmeal.my/images/icon_alcohol_disabled.png"  alt="" />
                           </DietDivcontains>
                           <P2 style={{marginTop : "10px"}}>No Alcohol</P2>
                       </DietDiv>
@@ -256,18 +288,39 @@ const MealDealDetail = () => {
                           <DietDivcontains style={{margin : "0"}}>
                                <DietDivimg src="https://www.kindmeal.my/images/icon_star.png" alt="" />
                           </DietDivcontains>
-                          <P2 style={{margin: "10px"}}>(2 votes)</P2>
+                          <P2 style={{margin: "10px"}}>({single.review} votes)</P2>
                       </DietDiv>
                   </Detailsdiv1>
                   <Detailsdiv2>
                       <P1>Location</P1>
-                      <P2>32A, Jalan Tiara 5, Bandar Baru Klang, 41150 Klang, Selangor.</P2>
+                      <P2>{single.location}</P2>
                       <P2>Opens: Fri- Wed: 8am - 6pm, Thu: Closed.</P2>
                       <P2>Tel: 012-7052931</P2>
+                      <br />
                       <P1>Terms & Conditions</P1>
-                      <P2>`Coupon Validity 	Must use coupon by May 12th, 2022`</P2>
-                      <P2>Exclusivity	Valid with other KindMeal.my coupons only</P2>
-                      <P2>Reservation	Not required</P2>
+                      <Terms>
+                          <Termsdiv>
+                            <P3>Coupon Validity</P3>
+                            <P3>Exclusivity</P3>
+                            <P3>Reservation</P3>
+                            <P3>Repeat Customers</P3>
+                            <P3>Dining Terms</P3>
+                          </Termsdiv>
+                          <Termsdiv2>
+                              <P2 >Must use coupon by May 12th, 2022</P2>
+                              <P2>Valid with other KindMeal.my coupons only</P2>
+                              <P2>Not required</P2>
+                              <P2>You can get this coupon once per week</P2>
+                              <ul>
+                                  <L>Valid for dine-in customers only</L>
+                                  <L>Additional Service Charge applicable</L>
+                                  <L>Price includes SST</L>
+                                  <L>Discount not applicable for Daily Set Meal</L>
+                                  <L>Enjoy 10% off organic products sold at the shop</L>
+                              </ul>
+                          </Termsdiv2>
+                      </Terms>
+                      
                   </Detailsdiv2>
               </Detailsdiv>
         </Maindiv>
