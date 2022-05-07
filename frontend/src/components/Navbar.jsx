@@ -114,7 +114,7 @@ const Navbar = () => {
                 </Icon>
             </Center>
             <Right>
-                <Option>Login</Option>
+                <Option><Link to="/auth/login" style={{textDecoration:"none", color:"black"}}>Login</Link> </Option>
                 <Option bg="#34619f" color="white">
                     Facebook
                 </Option>
