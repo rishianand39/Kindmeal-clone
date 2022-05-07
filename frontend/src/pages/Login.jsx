@@ -1,7 +1,7 @@
 
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import styled from "styled-components"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -40,7 +40,7 @@ const Button=styled.button`
 `
 
 const Login = () => {
-
+    let navigate = useNavigate();
     const [formData,setFormData]=useState({
         email:"",
         password:"",
@@ -60,7 +60,7 @@ const Login = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try {
-           let res=await fetch("https://kind-meal-project.herokuapp.com/auth/login",{
+           let res=await fetch("https://kind-meal-projects.herokuapp.com/auth/login",{
             method:'POST',
             body:JSON.stringify(formData),
             headers:{
@@ -68,7 +68,13 @@ const Login = () => {
             }
             })
             let data=await res.json();
-            console.log(data)
+            // console.log(data)
+          if(data!=="wrong credential"){
+            navigate("/"); 
+            
+          }  else{
+            alert(data)
+          }
             
         } catch (error) {
             console.log(error)

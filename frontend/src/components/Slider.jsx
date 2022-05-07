@@ -61,7 +61,6 @@ const Slider = () => {
         // eslint-disable-next-line
     },[]);
 
-    console.log(index)
   return (
     <Container>
         <Wrapper>
