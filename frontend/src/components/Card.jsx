@@ -1,10 +1,12 @@
 import styled from "styled-components"
 import {Link} from "react-router-dom"
+
 const Container=styled.div`
 padding-bottom: 15px;
+margin:30px 30px ;
 `
 const Wrapper=styled.div`
-width: 70%;
+width: 73%;
 margin: auto;
 box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 padding-bottom: 15px;
