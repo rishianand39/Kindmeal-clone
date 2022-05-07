@@ -2,7 +2,7 @@
 import {Routes,Route} from "react-router-dom"
 import Home from "./pages/Home"
 import MealDeal from "./pages/MealDeal"
-import KindMoments from "./pages/KindMoments"
+import KindMoments from "./pages/KindMoments";
 
 
 function App() {
