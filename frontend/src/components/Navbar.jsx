@@ -121,9 +121,11 @@ const Navbar = () => {
                 <Option bg="#666666" color="white">
                    Email
                 </Option>
-                <Option>
-                   Sign Up
-                </Option>
+                <Link  to={"/signup"}>
+                    <Option>
+                     Sign Up
+                    </Option>
+                </Link>
             </Right>
         </TopWrapper>
         <BottomWrapper>
