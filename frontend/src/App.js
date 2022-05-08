@@ -30,13 +30,36 @@ import { ButtonsHot } from "./components/ButtonsHot";
 import { HotPicsButton } from "./components/HotPicsButton";
 import { ProductHotPics } from "./components/ProductHotPics";
 
+import { Recipes } from "./pages/Recipes";
+
+
+import MealDealDetail from "./pages/MealDealDetail"
+import Login from "./pages/Login"
+import Signup from "./pages/Signup"
+
+
+
 function App() {
   return (
     <div className="App">
       <HotPicsButton />
       <Routes>
+
         <Route path="/" element={<ButtonsHot />}></Route>
         <Route path="/product/:id" element={<ProductHotPics />}></Route>
+
+        <Route path="/" element={<Home />}/>
+        <Route path="/mealdeal" element={<MealDeal />}/>
+
+        <Route path="/kindmoments" element={<KindMoments />}/>
+        <Route path="/Recipes" element={<Recipes/>}></Route>
+
+        <Route path="/kindmoments" element={<KindMoments />} />
+        <Route path="/mealdeal/:id" element={<MealDealDetail/>}/>
+        <Route path="/auth/login" element={<Login />} />
+        <Route path="/auth/register" element={<Signup/>}/>
+
+
       </Routes>
     </div>
   );

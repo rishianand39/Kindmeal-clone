@@ -5,7 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import {Link} from 'react-router-dom'
 
 const Container=styled.div`
-height: 130px;
+height: 110px;
 
 `
 const TopWrapper=styled.div`
@@ -114,16 +114,18 @@ const Navbar = () => {
                 </Icon>
             </Center>
             <Right>
-                <Option>Login</Option>
+                <Option><Link to="/auth/login" style={{textDecoration:"none", color:"black"}}>Login</Link> </Option>
                 <Option bg="#34619f" color="white">
                     Facebook
                 </Option>
                 <Option bg="#666666" color="white">
                    Email
                 </Option>
-                <Option>
-                   Sign Up
-                </Option>
+                <Link  to={"/auth/register"} style={{textDecoration:"none", color:"black"}}>
+                    <Option>
+                     Sign Up
+                    </Option>
+                </Link>
             </Right>
         </TopWrapper>
         <BottomWrapper>

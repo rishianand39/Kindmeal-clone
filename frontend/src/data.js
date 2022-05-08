@@ -6,22 +6,22 @@ export const Latest_newVideo = [
   },
   {
     id: 2,
-    img: "https://scontent-xsp1-3.xx.fbcdn.net/v/t39.30808-6/279632911_5314290635297845_3391748588661022374_n.png?stp=dst-png_p720x720&_nc_cat=100&ccb=1-5&_nc_sid=8024bb&_nc_ohc=Rp7uMUuWSHcAX9LqNuR&_nc_ht=scontent-xsp1-3.xx&edm=ALdPpPkEAAAA&oh=00_AT_06gTcY3G1vC-Fx9syriUdowHYwQXKUfbmi5xLc3Ap3A&oe=6275D66E",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/278658999_406387024283419_227485812459122487_n.jpg?_nc_cat=106&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=Cb9Hp2CB6IwAX_jkk9r&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT9elBvToOm1i-0E9hWXByfmpbiX29D1mzqOGhMtsFaFTw&oe=627AEF0D",
     title: "Wishing Our Dearest Muslim Friends A Safe, Joyful And Heartw..",
   },
   {
     id: 3,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/278543508_1355960868214798_747545810926411906_n.jpg?stp=dst-jpg_p720x720&_nc_cat=104&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=ATK1IM9c-vEAX-42e_J&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT--xBXntjRKAAacj2xr9ZRDyitM_skC5yPp8TCIoeu0vg&oe=6275B971",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/255080259_586462589141979_3351767045653503738_n.jpg?stp=dst-jpg_p720x720&_nc_cat=104&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=aoTgYOEYUOAAX9yKxhT&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT-fpPprNsdeXBy9hos-Cm8H6RNzF-Y5zk4cRU9HM3m79Q&oe=627AACCC",
     title: "Avocados Reduce The Risk Of Heart Disease, Study Shows",
   },
   {
     id: 4,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/269627482_328360085803658_1862075149003760853_n.jpg?stp=dst-jpg_s720x720&_nc_cat=1&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=BJzIVV8wD-kAX-8L8n7&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT_aZ-MYFIYLec3X23eweRXHx8W_sVfkeAjvbrqQGuskIQ&oe=6275347D",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/265676754_537504067934425_3867740012497271746_n.jpg?stp=dst-jpg_s720x720&_nc_cat=107&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=FSrKfIajvu4AX8Anysw&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT9rgfWozNxalwsQuIQwEbHth3BImfScMDbMAIVBiIN4pg&oe=627B9DB5",
     title: "Puppy Teaches A Scared Work Horse How To Play",
   },
   {
     id: 5,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/276952723_1006769379976026_3715953753088732529_n.jpg?stp=dst-jpg_s720x720&_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=Q6udYoqvZfQAX8nk1i3&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT_YcaqKcaCHVjYI_HR4PNyK5q5KJB6ebBpWHqA_TNU9Bw&oe=6275C223",
+    img: "https://www.kindmeal.my/photos/moment/23/23907-45378-s.jpg",
     title: "Spiced Sausage Pasta",
   },
 ];
