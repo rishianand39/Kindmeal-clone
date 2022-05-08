@@ -4,21 +4,21 @@ import Navbar from "../components/Navbar";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import KindCard from "../components/KindCard";
-//import Kindbanner from "../components/Kindbanner";
+
 
 const Container = styled.div``;
 
 const Bannercontainer = styled.div`
   width: 100%;
   height: 400px;
-  /* border:1px solid black; */
+  
   font-family: "Times New Roman", Times, serif;
 `;
 const Top = styled.div`
   width: 100%;
   height: 300px;
   background-color: whitesmoke;
-  /* border:1px solid green; */
+ 
   display: flex;
 `;
 
@@ -174,7 +174,7 @@ const KindMoments = () => {
             </Box1>
           </Topleft>
 
-          <Topright id="topright">
+          <Topright>
             <Box>
               <H3>Share Your KindMoments</H3>
               <About>
@@ -184,13 +184,13 @@ const KindMoments = () => {
             </Box>
           </Topright>
         </Top>
-        <Bott id="bott">
-          <Bott_left id="bott-left">
+        <Bott >
+          <Bott_left >
             <Button3>Moments</Button3>
             <Button2>Deal Details</Button2>
             <Button2>Followings</Button2>
           </Bott_left>
-          <Bott_right id="bott-right">
+          <Bott_right >
             <Input type="text" placeholder="Search user or place" />
             <Select name="" id="">
               <option value="">Delhi</option>
