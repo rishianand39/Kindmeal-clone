@@ -119,7 +119,7 @@ const Navbar = () => {
                     Facebook
                 </Option>
                 <Option bg="#666666" color="white">
-                   Email
+                  <Link to="/auth/login" style={{textDecoration:"none", color:"white"}}>Email</Link>  
                 </Option>
                 <Link  to={"/auth/register"} style={{textDecoration:"none", color:"black"}}>
                     <Option>

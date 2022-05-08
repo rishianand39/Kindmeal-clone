@@ -120,8 +120,8 @@ border-radius : 10px;
 margin-left : 25%;
 `
 const Detailsdiv = styled.div`
-width : 92%
-border : 1px solid red ; 
+width : 92%;
+/* border : 1px solid red ;  */
 padding : 3%;
 display : flex;
 `

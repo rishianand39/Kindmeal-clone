@@ -1,10 +1,14 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import MealDeal from "./pages/MealDeal";
+import MealDealDetail from "./pages/MealDealDetail"
 import KindMoments from "./pages/KindMoments";
 import { ProductHotPics } from "./components/ProductHotPics";
 import { ButtonsHot } from "./components/ButtonsHot";
+import {Recipes} from "./pages/Recipes"
 import "./App.css";
+import Login from "./pages/Login"
+import Signup from "./pages/Signup"
 
 function App() {
   return (
@@ -12,9 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/mealdeal" element={<MealDeal />} />
+        <Route path="/mealdeal/:id" element={<MealDealDetail />} />
         <Route path="/kindmoments" element={<KindMoments />} />
         <Route path="/hotpicks" element={<ButtonsHot />}></Route>
         <Route path="/hotpicks/:id" element={<ProductHotPics />}></Route>
+        <Route path="/recipes" element={<Recipes />}></Route>
+        <Route path="/auth/login" element={<Login />}></Route>
+        <Route path="/auth/register" element={<Signup />}></Route>
+
       </Routes>
     </div>
   );
