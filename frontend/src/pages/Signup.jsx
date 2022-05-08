@@ -160,6 +160,8 @@ const Signup = () => {
 
     }
 
+
+
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try {
@@ -173,7 +175,7 @@ const Signup = () => {
             let data=await res.json();
             // console.log(data)
           if(!data.errors){
-            navigate("/"); 
+            navigate("/auth/login"); 
             
               
             }  else{
@@ -309,7 +311,7 @@ const Signup = () => {
                           <InputP>Only your age will be publicly visible</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input name="birth" onChange={handleChange} style={{width:"80%"}} type="text" placeholder="Month/Day/Year"/>
+                              <Input name="birth" onChange={handleChange} style={{width:"80%"}} type="date" placeholder="Month/Day/Year"/>
                           </div>
 
                           <br />
