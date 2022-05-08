@@ -5,7 +5,7 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import {Link} from 'react-router-dom'
 
 const Container=styled.div`
-height: 130px;
+height: 110px;
 
 `
 const TopWrapper=styled.div`
