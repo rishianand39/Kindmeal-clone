@@ -1,23 +1,19 @@
-## Kindmeal-clone
+# Kindmeal-clone
+#backend 
+https://kind-meal-project.herokuapp.com/
 
- ## backend
- https://kind-meal-project.herokuapp.com/
- 
- # routes available
- 
- /auth/register
- 
- 
- /auth/login
- 
- 
- 
- /mealdeal
- 
- 
- 
- /hotpick
- 
- 
- 
- /kindmoment
+# routes available
+
+/auth/register
+
+
+/auth/login
+
+
+/mealdeal
+
+
+/kindmoment
+
+
+/hotpick

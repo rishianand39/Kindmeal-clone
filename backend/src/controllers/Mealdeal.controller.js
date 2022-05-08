@@ -2,9 +2,10 @@
 const router=require("express").Router();
 
 
-const Product = require("../models/mealdeal.model");
+const Product = require("../models/Mealdeal.model");
 
 const { verifyToken,verifyTokenAuthorization, verifyTokenAndAdmin } = require("./verifyToken");
+
 
 // CREATE PRODUCT
 
@@ -12,7 +13,7 @@ router.post("/",verifyTokenAndAdmin,async(req,res)=>{
     const newProduct=new Product(req.body);
     try {
         const savedProduct=await newProduct.save();
-        return res.status(200).json(savedProduct)
+        return res.status(200).json(savedProduct);
         
     } catch (error) {
         return res.status(500).json(error)
@@ -23,7 +24,7 @@ router.post("/",verifyTokenAndAdmin,async(req,res)=>{
 router.put("/:id",verifyTokenAndAdmin,async(req,res)=>{
 
     try {
-        const updatedProduct = await User.findByIdAndUpdate(
+        const updatedProduct = await Product.findByIdAndUpdate(
           req.params.id,
           {
             $set: req.body,
@@ -40,7 +41,7 @@ router.put("/:id",verifyTokenAndAdmin,async(req,res)=>{
 // DELETE PRODUCT
 router.delete("/:id",verifyTokenAndAdmin,async(req,res)=>{
     try {
-        await User.findByIdAndDelete(req.params.id);
+        await Product.findByIdAndDelete(req.params.id);
 
        return res.status(200).json("Product has been deleted...")
     } catch (error) {
@@ -51,7 +52,7 @@ router.delete("/:id",verifyTokenAndAdmin,async(req,res)=>{
 // GET PRODUCT
 router.get("/find/:id",async(req,res)=>{
     try {
-        const product= await User.findById(req.params.id);
+        const product= await Product.findById(req.params.id);
 
         return res.status(200).json(product)
 
