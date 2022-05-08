@@ -146,13 +146,13 @@ const Navbar = () => {
                 <Link style={{textDecoration:"none",color:"white"}}  to={"/recipes"}>Recipes</Link>
             </Nav>
             <Nav>
-                <Link style={{textDecoration:"none",color:"white"}}  to={"/directory"}>Directory</Link>
+                <Link style={{textDecoration:"none",color:"white"}}  to={""}>Directory</Link>
             </Nav>
             <Nav>
-                <Link style={{textDecoration:"none",color:"white"}}  to={"/article"}>Articles</Link>
+                <Link style={{textDecoration:"none",color:"white"}}  to={""}>Articles</Link>
             </Nav>
             <Nav>
-                <Link style={{textDecoration:"none",color:"white"}}  to={"/help"}>Help</Link>
+                <Link style={{textDecoration:"none",color:"white"}}  to={""}>Help</Link>
             </Nav>
             </Content>
  
