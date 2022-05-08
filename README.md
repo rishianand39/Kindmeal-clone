@@ -1,5 +1,5 @@
 # Kindmeal-clone
-#backend 
+## backend 
 https://kind-meal-project.herokuapp.com/
 
 
@@ -8,18 +8,4 @@ https://kind-meal-project.herokuapp.com/
 https://kindmeal.vercel.app/
 
 
-# routes available
 
-/auth/register
-
-
-/auth/login
-
-
-/mealdeal
-
-
-/kindmoment
-
-
-/hotpick
