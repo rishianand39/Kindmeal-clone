@@ -1,6 +1,9 @@
 import styled from "styled-components"
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Link,useNavigate } from "react-router-dom";
+import { useState } from "react";
+
 
 const Container=styled.div`
 `
@@ -63,9 +66,9 @@ width : 23%;
 // border : 1px solid black;
 padding-left : 10px;
 `
-const Detaildiv =styled.div`
+const Detaildiv =styled.form`
 width : 72%;
-// border-left : 1px solid grey;
+// border-left : 1px solid grey; 
 margin-left : 5%;
 `
 const P=styled.p`
@@ -129,6 +132,61 @@ const BBannerimg = styled.img`
 
 
 const Signup = () => {
+
+    let navigate = useNavigate();
+    const [formData,setFormData]=useState({
+        name:"",
+        email:"",
+        re_enter_email:"",
+        password:"",
+        username:"",
+        birth:"",
+        country:"",
+        state:"",
+        gender:"",
+        profile_photo:"",
+
+    })
+
+
+
+    const handleChange=(e)=>{
+        const {name,value}=e.target;
+        // console.log(e.target)
+        setFormData({
+            ...formData,
+            [name]: value
+        })
+
+    }
+
+    const handleSubmit=async(e)=>{
+        e.preventDefault()
+        try {
+           let res=await fetch("https://kind-meal-projects.herokuapp.com/auth/register",{
+            method:'POST',
+            body:JSON.stringify(formData),
+            headers:{
+                "Content-Type":"application/json",
+            }
+            })
+            let data=await res.json();
+            // console.log(data)
+          if(!data.errors){
+            navigate("/"); 
+            
+              
+            }  else{
+                alert("Fill each field")
+          }
+            
+        } catch (error) {
+            console.log(error)
+        }
+    
+    }
+
+
   return (
     <Container>
         <Navbar />
@@ -210,40 +268,40 @@ const Signup = () => {
                       </Detailnamediv>
                       
                       {/* <br /> */}
-                      <Detaildiv>
+                      <Detaildiv onSubmit={handleSubmit}>
                           <div style={{ display: "flex" }}>
                           <InputP>First name</InputP>
                           <InputP style={{marginLeft : "170px"}}>Last name</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input type="text" title="First name" />
-                              <Input style={{marginLeft:"10px"}} type="text" title="First name"/>
+                              <Input onChange={handleChange} name="name" type="text" title="First name" />
+                              <Input name="lastname" style={{marginLeft:"10px"}} type="text" title="First name"/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
                           <InputP>Your email must be correct to receive activation email</InputP>
                            </div>
-                          <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="text"/>
+                          <div style={{ display: "flex"}}>
+                              <Input onChange={handleChange} name="email" style={{width:"80%"}} type="email"/>
+                          </div>
+
+                          <br />
+                          <div style={{ display: "flex",}}>
+                              <Input name="re_enter_email" onChange={handleChange} style={{width:"80%"}} type="text"/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="text"/>
+                              <Input onChange={handleChange} name="password" style={{width:"80%"}} type="password"/>
                           </div>
 
                           <br />
-                          <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="password"/>
-                          </div>
-
-                          <br />
-                          <div style={{ display: "flex" }}>
-                          <InputP>Choose a cool username for your Personal Profile page, comments & reviews</InputP>
+                          <div style={{ display: "flex"}}>
+                          <InputP>Choose a cool username for your Personal Profile page, comments &amp; reviews</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="text"/>
+                              <Input onChange={handleChange} name="username" style={{width:"80%"}} type="text"/>
                           </div>
 
                           <br />
@@ -251,42 +309,57 @@ const Signup = () => {
                           <InputP>Only your age will be publicly visible</InputP>
                            </div>
                           <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="text" placeholder="Month/Day/Year"/>
+                              <Input name="birth" onChange={handleChange} style={{width:"80%"}} type="text" placeholder="Month/Day/Year"/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="text" placeholder="Select Country"/>
+                              <Input name="country" onChange={handleChange} style={{width:"80%"}} type="text" placeholder="Select Country"/>
                           </div>
 
                           <br />
                           <div style={{ display: "flex" }}>
-                              <Input style={{width:"80%"}} type="text" placeholder="Select State"/>
+                              <Input name="state" onChange={handleChange} style={{width:"80%"}} type="text" placeholder="Select State"/>
                           </div>
 
                           <br />
                           <div>
-                              <select style={{
+                              <select name="gender" onChange={handleChange} style={{
+                                  
                                   padding: "10px",
                                   border : "1px solid lightgrey",
                                   fontSize: "16px"}}>
-                                  <option value="male">Select Gender</option>
+                                  <option >Select Gender</option>
                                   <option value="male">Male</option>
-                                  <option value="femle">Female</option>
+                                  <option value="female">Female</option>
                               </select>
                           </div>
 
                           <br />
                           <div>
-                              <Input style={{width:"80%"}} type="file" placeholder="Select Photo"/>
+                              <Input name="profile_photo" onChange={handleChange} style={{width:"80%"}} type="file" placeholder="Select Photo"/>
                           </div>
+                          <div style={{ display: "flex", margin: "10px 0 0 30px" }}>
+                          <input type="checkbox" />
+                      <p style={{ marginLeft: "10px"}}> I agree to KindMeal.my's Terms &amp; Conditions</p>
+                  </div>
+                  <Input type={"submit"} value="Join Now"
+                    style={{
+                        display:"block",
+                        height: "45px",
+                        lineHeight:"25px",
+                        fontSize:"18px",
+                        color:"#fff",
+                        fontWeight:"bold",
+                        background:"#f53838",
+                        cursor:"pointer",
+                        border:"none",
+                        borderRadius:"8px"
+                    }}
+                  />
                       </Detaildiv>
                   </Signupdetaildiv>
-                  <div style={{ display: "flex", margin: "0 0 0 30px" }}>
-                          <input type="checkbox" />
-                      <p style={{ marginLeft: "10px"}}> I agree to KindMeal.my's Terms & Conditions</p>
-                  </div>
-                  <Button>Join Now</Button>
+                  
               </Signupdivdetail>
           </Signupdiv>
           <BBannerdiv>

@@ -121,7 +121,7 @@ const Navbar = () => {
                 <Option bg="#666666" color="white">
                    Email
                 </Option>
-                <Link  to={"/auth/register"}>
+                <Link  to={"/auth/register"} style={{textDecoration:"none", color:"black"}}>
                     <Option>
                      Sign Up
                     </Option>

@@ -10,13 +10,16 @@ const Container=styled.div`
 
 `
 const LoginDiv=styled.div`
-    width: 40vw;
+    width: 30vw;
     margin:40px auto;
     box-shadow: rgba(10, 0, 0, 0.56) 0px 22px 70px 4px;
     padding: 50px;
 
 `
 const Logo=styled.img`
+@media only screen and (max-width:1150px){
+    width: 70%;
+}
     
 `
 const Hr=styled.hr`
