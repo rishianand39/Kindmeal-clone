@@ -5,20 +5,19 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import KindCard from "../components/KindCard";
 
-
 const Container = styled.div``;
 
 const Bannercontainer = styled.div`
   width: 100%;
   height: 400px;
-  
+
   font-family: "Times New Roman", Times, serif;
 `;
 const Top = styled.div`
   width: 100%;
   height: 300px;
   background-color: whitesmoke;
- 
+
   display: flex;
 `;
 
@@ -147,13 +146,13 @@ const KindMoments = () => {
       .then((data) => setKind(data.data));
   }, []);
 
-  console.log(kind);
+ // console.log(kind);
 
   return (
     <Container>
       <Navbar />
       <Bannercontainer>
-        <Top >
+        <Top>
           <Topleft>
             <Box1>
               <Toplefttop>
@@ -184,15 +183,16 @@ const KindMoments = () => {
             </Box>
           </Topright>
         </Top>
-        <Bott >
-          <Bott_left >
+        <Bott>
+          <Bott_left>
             <Button3>Moments</Button3>
             <Button2>Deal Details</Button2>
             <Button2>Followings</Button2>
           </Bott_left>
-          <Bott_right >
+          <Bott_right>
             <Input type="text" placeholder="Search user or place" />
             <Select name="" id="">
+              <option value="">Choose City</option>
               <option value="">Delhi</option>
               <option value="">UttarPradesh</option>
               <option value="">Bihar</option>
