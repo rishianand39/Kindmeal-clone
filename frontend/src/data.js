@@ -1,28 +1,28 @@
 export const Latest_newVideo = [
   {
     id: 1,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/278270340_337880421579207_3490303762422239452_n.jpg?stp=dst-jpg_s720x720&_nc_cat=101&ccb=1-5&_nc_sid=ad6a45&_nc_ohc=dx7THNVFA9wAX_RmYH9&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT_YySrbbRoWP85r_WzsOZj4VsN3FjJ7bj-bqlNlcdbFSQ&oe=62761C5D",
-    title: "Hummus Pasta 🍝",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/278388410_677604743496047_9151331241851791231_n.jpg?stp=dst-jpg_s720x720&_nc_cat=101&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=C9fg6J_4tpEAX_SNtWD&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT_t-_mJAmvAhaSCDJ-AAyG9RpoZQQXf_7kLbYwrxMXN9A&oe=62828CD2",
+    title: "Ibex Risk Their Lives Climbing Nearly Vertical Walls",
   },
   {
     id: 2,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/278658999_406387024283419_227485812459122487_n.jpg?_nc_cat=106&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=Cb9Hp2CB6IwAX_jkk9r&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT9elBvToOm1i-0E9hWXByfmpbiX29D1mzqOGhMtsFaFTw&oe=627AEF0D",
-    title: "Wishing Our Dearest Muslim Friends A Safe, Joyful And Heartw..",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t39.30808-6/280225129_5346407728752802_8246723769783955200_n.jpg?stp=dst-jpg_p720x720&_nc_cat=106&ccb=1-6&_nc_sid=8024bb&_nc_ohc=g9WIBf0LDA8AX8Z79Qu&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT_YTVUMQsBMtxdJfwL8SgrTYDIyN-oqzc6OK2pE4VgCqw&oe=62837128",
+    title: "Wtf Cafe, Mont Kiara Delights You With A Creative Of Western..",
   },
   {
     id: 3,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/255080259_586462589141979_3351767045653503738_n.jpg?stp=dst-jpg_p720x720&_nc_cat=104&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=aoTgYOEYUOAAX9yKxhT&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT-fpPprNsdeXBy9hos-Cm8H6RNzF-Y5zk4cRU9HM3m79Q&oe=627AACCC",
-    title: "Avocados Reduce The Risk Of Heart Disease, Study Shows",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/279587787_722270142298564_2578719713009089507_n.jpg?stp=dst-jpg_s720x720&_nc_cat=103&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=MIuDvbjC61gAX_kp-hG&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT-i_B_FfzBJl7yP1a1Az6ZCkhSe2Fgn-z223AsnTGzi2w&oe=6283A69F",
+    title: "Sun-dried Tomato Hummus",
   },
   {
     id: 4,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/265676754_537504067934425_3867740012497271746_n.jpg?stp=dst-jpg_s720x720&_nc_cat=107&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=FSrKfIajvu4AX8Anysw&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT9rgfWozNxalwsQuIQwEbHth3BImfScMDbMAIVBiIN4pg&oe=627B9DB5",
-    title: "Puppy Teaches A Scared Work Horse How To Play",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/277911638_1079162052948186_6904199821651556653_n.jpg?stp=dst-jpg_p720x720&_nc_cat=101&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=JS1SX2jfRdoAX8VlG6M&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT_gC8vedGXNu43kMYNrIYR1fewswwUap-Law7-XNCBMJw&oe=6283EA27",
+    title: "Orangutan Mom Kitra Cuddles With Her Fuzzy Baby",
   },
   {
     id: 5,
-    img: "https://www.kindmeal.my/photos/moment/23/23907-45378-s.jpg",
-    title: "Spiced Sausage Pasta",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/279727376_1544252029310899_6179953792937702299_n.jpg?stp=dst-jpg_s720x720&_nc_cat=111&ccb=1-6&_nc_sid=ad6a45&_nc_ohc=XTTkwCKMt-4AX-YQ-4L&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AT9csjdGgcj-cKlpfSVZ7rt_lD8z16XpB9a6jvIj1hRLlA&oe=62837238",
+    title: "Carrot ''salmon'' & Cream Cheese Bagels",
   },
 ];
 export const Latest_newVideo_heading =[
