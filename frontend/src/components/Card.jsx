@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import {Link} from "react-router-dom"
+import {v4 as uuid} from "uuid"
 const Container=styled.div`
 padding-bottom: 15px;
 `
@@ -52,7 +53,7 @@ const Card = ({contents,heading}) => {
         <Wrapper>
             <Heading>
                 {heading.map((e)=>
-                <Content key={e.id}><Link to={e.to}
+                <Content key={uuid()}><Link to={e.to}
                 style={{
                     textDecoration:"none",
                     color: "#6e7174",

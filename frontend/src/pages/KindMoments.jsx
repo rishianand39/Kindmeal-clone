@@ -142,7 +142,7 @@ const KindMoments = () => {
 
   useEffect(() => {
     axios
-      .get("https://kind-meal-project.herokuapp.com/kindmoment")
+      .get("https://kind-meal-projects.herokuapp.com/kindmoment")
       .then((data) => setKind(data.data));
   }, []);
 

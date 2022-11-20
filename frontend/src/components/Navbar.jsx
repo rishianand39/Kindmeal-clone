@@ -6,6 +6,7 @@ import {Link} from 'react-router-dom'
 
 const Container=styled.div`
 height: 110px;
+margin-bottom: 20px;
 
 `
 const TopWrapper=styled.div`
