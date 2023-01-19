@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {v4 as uuid} from "uuid"
 
 export const AllCategory = ({ item, comment, title }) => {
   return (
@@ -13,7 +14,7 @@ export const AllCategory = ({ item, comment, title }) => {
         </div>
         <div className="items-div">
           {item.map((e) => (
-            <div className="items-des">
+            <div className="items-des" key={uuid()}>
               <div className="items-image">
                 <img height={"100%"} width={"100%"} src={e.image} alt="" />
                 <div>{e.heading}</div>
@@ -26,7 +27,7 @@ export const AllCategory = ({ item, comment, title }) => {
         <div className="comment-div">
           {comment.map((e) =>
             e.id > 4 ? null : (
-              <div>
+              <div key={uuid()}>
                 <div className="comment-image">
                   <img height={"100%"} width={"100%"} src={e.image} alt="" />
                 </div>

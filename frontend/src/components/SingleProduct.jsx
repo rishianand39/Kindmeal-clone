@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import {v4 as uuid} from "uuid"
 import { HotPicsButton } from "./HotPicsButton";
 
 export const SingleProduct = ({ item, comment, title }) => {
@@ -14,7 +15,7 @@ export const SingleProduct = ({ item, comment, title }) => {
         </div>
         <div className="items-div">
           {item.map((e) => (
-            <div className="items-des">
+            <div className="items-des" key={uuid()}>
               <div className="items-image">
                 <img height={"100%"} width={"100%"} src={e.image} alt="" />
                 <div>{e.heading}</div>
@@ -25,7 +26,7 @@ export const SingleProduct = ({ item, comment, title }) => {
         </div>
         <div className="comment-div">
           {comment.map((e) => (
-            <div>
+            <div key={uuid()}>
               <div className="comment-image">
                 <img height={"100%"} width={"100%"} src={e.image} alt="" />
               </div>

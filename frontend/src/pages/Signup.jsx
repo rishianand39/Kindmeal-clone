@@ -165,7 +165,7 @@ const Signup = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try {
-           let res=await fetch("https://kind-meal-projects.herokuapp.com/auth/register",{
+           let res=await fetch("https://kindmeal-1i0m.onrender.com/auth/register",{
             method:'POST',
             body:JSON.stringify(formData),
             headers:{

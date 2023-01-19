@@ -1,12 +1,12 @@
 export const Latest_newVideo = [
   {
     id: 1,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/314978618_524051059301008_6378832695180533264_n.jpg?stp=dst-jpg_s720x720&_nc_cat=105&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=1i2i9laLdfAAX88jT_r&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AfAoJoJ59XAAvZ0dkg-IOPwTNdzeCwJdda7E-gotW9sePg&oe=637FD86E",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/320213323_3414369135459963_316908691784863469_n.jpg?stp=dst-jpg_s720x720&_nc_cat=1&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=iZJDaRLSi4wAX-GPrit&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AfArDGtX2L6YvcKDi-7TAb5yGcX8ZqK0hMj-vCp3r_4mkQ&oe=63CE2FCE",
     title: "Ibex Risk Their Lives Climbing Nearly Vertical Walls",
   },
   {
     id: 2,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/269933813_608037997127503_2818852699856212675_n.jpg?stp=dst-jpg_s720x720&_nc_cat=104&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=dczcFr4uKokAX-LhE3t&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AfAhQVZzLeAXDkZ2DdW71hE7Wydajq9Pbg9qCpXSzPrPAg&oe=637F126F",
+    img: "https://www.kindmeal.my/photos/moment/24/24894-48623-s.jpg",
     title: "Wtf Cafe, Mont Kiara Delights You With A Creative Of Western..",
   },
   {
@@ -16,7 +16,7 @@ export const Latest_newVideo = [
   },
   {
     id: 4,
-    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/247061167_208548101452009_8170258607056305982_n.jpg?stp=dst-jpg_s720x720&_nc_cat=108&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=EDK8anNmN3YAX_pWBTS&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AfDaYghSYJDygW0OajrvmYgys-SKw-hp_DQ76kBXg07AKA&oe=637F4668",
+    img: "https://scontent-xsp1-2.xx.fbcdn.net/v/t15.5256-10/95822272_692328331526838_135936075695652864_n.jpg?stp=dst-jpg_s720x720&_nc_cat=106&ccb=1-7&_nc_sid=ad6a45&_nc_ohc=NwudxBn0ToQAX8krIAV&_nc_ht=scontent-xsp1-2.xx&edm=ALdPpPkEAAAA&oh=00_AfBRSOcoDC316VuTfBvpmLPOa2unKOL4htJ4s1l4rnDk2Q&oe=63CE76CB",
     title: "Orangutan Mom Kitra Cuddles With Her Fuzzy Baby",
   },
   {

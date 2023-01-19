@@ -104,7 +104,7 @@ const KindCard = ({ kindData }) => {
   return (
     <Kindcont>
       {kindData.map((e) => (
-        <Kindcard>
+        <Kindcard key={e._id}>
       
             <Cardtop>
               <Topleft>

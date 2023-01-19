@@ -1,6 +1,6 @@
 # Kindmeal-clone
 ## backend 
-https://kind-meal-projects.herokuapp.com/
+https://kindmeal-1i0m.onrender.com/
 
 
 ## frontend

@@ -2,6 +2,7 @@ import Navbar from "../components/Navbar";
 import styled from "styled-components";
 import Footer from "../components/Footer";
 import "./style.css";
+import {v4 as uuid} from "uuid"
 // import { Link } from "react-router-dom";
 import { recipes } from "../recipesdata";
 
@@ -214,7 +215,7 @@ export const Recipes = () => {
         </CategoryBar>
         <RecipesCard>
           {recipes.map((item)=>(
-            <CardDiv>
+            <CardDiv key={uuid()}>
              <StripsTop>
                  <StripImage>
                    <Image id="owner" src={item.owner_img}/>

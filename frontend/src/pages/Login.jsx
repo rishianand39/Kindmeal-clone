@@ -63,7 +63,7 @@ const Login = () => {
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try {
-           let res=await fetch("https://kind-meal-projects.herokuapp.com/auth/login",{
+           let res=await fetch("https://kindmeal-1i0m.onrender.com/auth/login",{
             method:'POST',
             body:JSON.stringify(formData),
             headers:{

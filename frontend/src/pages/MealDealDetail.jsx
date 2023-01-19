@@ -200,7 +200,7 @@ const MealDealDetail = () => {
   }, []);
 
   const getdata = async () => {
-    await fetch(`https://kind-meal-projects.herokuapp.com/mealdeal/find/${id}`)
+    await fetch(`https://kindmeal-1i0m.onrender.com/mealdeal/find/${id}`)
       .then((d) => d.json())
       .then((data) => {
         setSingle(data);

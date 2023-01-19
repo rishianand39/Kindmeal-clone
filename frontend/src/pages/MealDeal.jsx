@@ -274,7 +274,7 @@ const MealDeal = () => {
   }, []);
 
   const getdata = () => {
-    fetch("https://kind-meal-projects.herokuapp.com/mealdeal")
+    fetch("https://kindmeal-1i0m.onrender.com/mealdeal")
       .then((d) => d.json())
       .then((data) => {
         dispatch(mealsdeal(data));
